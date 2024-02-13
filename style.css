@@ -1,0 +1,134 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 10px;
+  }
+
+  .todo-app{
+    background-color: aquamarine;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto 20px;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+.todo-app h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.input-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightcyan;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.add-task{
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: lightpink;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+
+ul li {
+  border: none;
+  outline: none;
+  list-style: none;
+  font-size: 17px;
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li:hover {
+  background: lightgoldenrodyellow;
+  border-radius: 10px;
+}
+#list input {
+  padding: 0px;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+  
+#list label:before {
+  content:'';
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#list input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+#list input:checked + label:before {
+  background: #0079bf;
+} 
+#list :checked + label {
+  text-decoration: line-through;
+}
+.delete {
+  height: 28px;
+}
+.delete:hover {
+  cursor: pointer;
+}
+
+.task-counter-field{
+  margin-bottom: 20px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
